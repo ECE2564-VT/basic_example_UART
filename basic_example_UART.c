@@ -3,8 +3,8 @@
  * Pushing S2 on the BoosterPack toggles the LED1 on the Launchpad at any time.
  * The program gets characters sent from your Laptop and decides whether it is Number, Letter or Other. Then,
  * it sends back N, L or O to the laptop in response.
- * Sending lower case c from laptop changes the baudrate. Currenlty, the only other baudrate implemented is 19200.
- * The system clock for this project is 3MHz and all the UART calcuations are based on this number.
+ * Sending lower case c from laptop changes the baudrate. Currently, the only other baudrate implemented is 19200.
+ * The system clock for this project is 3MHz and all the UART calculations are based on this number.
  */
 
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
@@ -36,7 +36,7 @@ void initializeGPIO();
      uartConfig.overSampling = EUSCI_A_UART_OVERSAMPLING_BAUDRATE_GENERATION; // Oversampling
 
      // Related to other configurations
-     uartConfig.parity = EUSCI_A_UART_NO_PARITY;                  // No praity
+     uartConfig.parity = EUSCI_A_UART_NO_PARITY;                  // No parity
      uartConfig.msborLsbFirst = EUSCI_A_UART_LSB_FIRST;           // LSB First
      uartConfig.numberofStopBits = EUSCI_A_UART_ONE_STOP_BIT;     // One stop bit
      uartConfig.dataLength = EUSCI_A_UART_8_BIT_LEN;              // Data length is 8 bits
